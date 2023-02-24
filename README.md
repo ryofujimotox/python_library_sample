@@ -16,10 +16,9 @@ python_library_sample
     |  |  |  |--text.json
     |  |
     |  |--package_enemy
-    |  |  |--__init__.py
     |  |  |--badman.py
     |  |  |--common
-    |  |  |  |--text.png
+    |  |  |  |--text.json
 ```
 
 - Library Name: python_library_sample
@@ -65,8 +64,11 @@ pip install git+https://github.com/ryofujimotox/python_library_sample
 1 put `main.py`
 
 ``` python
+# type1
 from package_hero import greeting
-from package_enemy import greeting as enemy_greeting
+
+# type2
+from package_enemy.badman import greeting as enemy_greeting
 
 
 def main():
