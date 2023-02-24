@@ -35,6 +35,8 @@ python_library_sample
 
 1 local install
 
+put
+
 ```
 your_project
 |--main.py
@@ -42,6 +44,8 @@ your_project
 |--python_library_sample
 |  |--.....
 ```
+
+debug install
 
 ```
 pip install -e /your_project/python_library_sample
@@ -58,11 +62,45 @@ pip install git+https://github.com/ryofujimotox/python_library_sample
 
 ## How it Work
 
-
+1 put `main.py`
 
 ``` python
+from package_hero import greeting
+from package_enemy import greeting as enemy_greeting
+
+
+def main():
+    greeting()
+    enemy_greeting()
+    exit()
+
+
+if __name__ == "__main__":
+    main()
+```
+
+2 run
 
 ```
+python main.py
+```
+
+3 confirm outout
+
+```
+hero: HELLO I'm HERO
+hero: You are welcome
+badman: We lost.
+```
+
+
+
+## Customize
+
+
+
+
+
 
 
 
